@@ -45,7 +45,12 @@ public class LEDController extends Subsystem {
  public void setLEDs(int color){
     ledArduino.write(0x08, color);
  }
-
+ 
+ /**
+  * Set leds with mode
+  * @param color Color to set
+  * @param mode Mode to set
+  */
  public void setMode(int color, int mode){
     ledArduino.write(0x08, mode);
     ledArduino.write(0x08, color);
